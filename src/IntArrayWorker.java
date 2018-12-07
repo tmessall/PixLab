@@ -97,4 +97,24 @@ public class IntArrayWorker {
 		return count;
 	}
 
+	public int getLargest() {
+		int largest = matrix[0][0];
+		for (int[] rowArray : matrix) {
+			for (int item : rowArray) {
+				if (item > largest) {
+					largest = item;
+				}
+			}
+		}
+		return largest;
+	}
+
+	public int getColTotal(int x) {
+		int colTotal = 0;
+		for (int[] rowArray : matrix) {
+			colTotal += rowArray[x];
+		}
+		return colTotal;
+	}
+
 }
