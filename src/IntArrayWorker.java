@@ -85,4 +85,16 @@ public class IntArrayWorker {
 		}
 	}
 
+	public int getCount(int i) {
+		int count = 0;
+		for (int[] rowArray : matrix) {
+			for (int item : rowArray) {
+				if (item == i) {
+					count++;
+				}
+			}
+		}
+		return count;
+	}
+
 }
