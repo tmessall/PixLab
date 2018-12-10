@@ -209,6 +209,20 @@ public class Picture extends SimplePicture {
 		}
 	}
 
+	public void mirrorHorizontalBotToTop() {
+		Pixel[][] pixels = this.getPixels2D();
+		Pixel topPixel = null;
+		Pixel botPixel = null;
+		int height = pixels.length;
+		for (int row = 0; row < height/2; row++) {
+			for (int col = 0; col < pixels[row].length; col++) {
+				topPixel = pixels[row][col];
+				botPixel = pixels[height - 1 - row][col];
+				topPixel.setColor(botPixel.getColor());
+			}
+		}
+	}
+
 	/**
 	 * copy from the passed fromPic to the specified startRow and startCol in
 	 * the current picture
