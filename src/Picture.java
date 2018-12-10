@@ -143,6 +143,20 @@ public class Picture extends SimplePicture {
 		}
 	}
 
+	public void negate() {
+		Pixel[][] pixels = this.getPixels2D();
+		for (Pixel[] rowArray : pixels) {
+			for (Pixel pixelObj : rowArray) {
+				int newRed = 255 - pixelObj.getRed();
+				int newBlue = 255 - pixelObj.getBlue();
+				int newGreen = 255 - pixelObj.getGreen();
+				pixelObj.setRed(newRed);
+				pixelObj.setBlue(newBlue);
+				pixelObj.setGreen(newGreen);
+			}
+		}
+	}
+
 	/**
 	 * copy from the passed fromPic to the specified startRow and startCol in
 	 * the current picture
