@@ -157,6 +157,30 @@ public class Picture extends SimplePicture {
 		}
 	}
 
+	public void grayscale() {
+		Pixel[][] pixels = this.getPixels2D();
+		for (Pixel [] rowArray : pixels) {
+			for (Pixel pixelObj : rowArray) {
+				int avg = (pixelObj.getRed() + pixelObj.getBlue() + pixelObj.getGreen()) / 3;
+				pixelObj.setRed(avg);
+				pixelObj.setBlue(avg);
+				pixelObj.setGreen(avg);
+			}
+		}
+	}
+
+	public void fixUnderwater() {
+		Pixel[][] pixels = this.getPixels2D();
+		for (Pixel [] rowArray : pixels) {
+			for (Pixel pixelObj : rowArray) {
+				int newBlue = pixelObj.getBlue() - 100;
+				int newGreen = pixelObj.getGreen() - 100;
+				pixelObj.setGreen(newGreen);
+				pixelObj.setBlue(newBlue);
+			}
+		}
+	}
+
 	/**
 	 * copy from the passed fromPic to the specified startRow and startCol in
 	 * the current picture
