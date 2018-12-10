@@ -173,8 +173,8 @@ public class Picture extends SimplePicture {
 		Pixel[][] pixels = this.getPixels2D();
 		for (Pixel [] rowArray : pixels) {
 			for (Pixel pixelObj : rowArray) {
-				int newBlue = pixelObj.getBlue() - 100;
 				int newGreen = pixelObj.getGreen() - 100;
+				int newBlue = pixelObj.getBlue() - 100;
 				pixelObj.setGreen(newGreen);
 				pixelObj.setBlue(newBlue);
 			}
