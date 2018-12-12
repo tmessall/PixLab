@@ -296,6 +296,22 @@ public class Picture extends SimplePicture {
 		}
 	}
 
+	public void copyPart(Picture fromPic, int startInPicRow, int endInPicRow, int startInPicCol, int endInPicCol, int startRow, int startCol) {
+		Pixel fromPixel = null;
+		Pixel toPixel = null;
+		Pixel[][] toPixels = this.getPixels2D();
+		Pixel[][] fromPixels = fromPic.getPixels2D();
+		for (int fromRow = startInPicRow, toRow = startRow; fromRow < endInPicRow
+				&& toRow < toPixels.length; fromRow++, toRow++) {
+			for (int fromCol = startInPicCol, toCol = startCol; fromCol < endInPicCol
+					&& toCol < toPixels[0].length; fromCol++, toCol++) {
+				fromPixel = fromPixels[fromRow][fromCol];
+				toPixel = toPixels[toRow][toCol];
+				toPixel.setColor(fromPixel.getColor());
+			}
+		}
+	}
+
 	/** Method to create a collage of several pictures */
 	public void createCollage() {
 		Picture flower1 = new Picture("flower1.jpg");
