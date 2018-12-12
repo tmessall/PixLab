@@ -59,6 +59,13 @@ public class PictureTester
     swan.explore();
   }
 
+  public static void testMyEdgeDetection()
+  {
+    Picture swan = new Picture("swan.jpg");
+    swan.myEdgeDetection(1);
+    swan.explore();
+  }
+
   public static void testNegate() {
     Picture beach = new Picture("beach.jpg");
     beach.explore();
@@ -163,6 +170,7 @@ public class PictureTester
     // testCopyPart();
     // testMyCollage();
     testEdgeDetection();
+    testMyEdgeDetection();
     // testEdgeDetection2();
     // testChromakey();
     // testEncodeAndDecode();
