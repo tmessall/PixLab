@@ -130,6 +130,12 @@ public class PictureTester
     canvas.explore();
   }
 
+  public static void testMyCollage() {
+    Picture canvas = new Picture("640x480.jpg");
+    canvas.myCollage();
+    canvas.explore();
+  }
+
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -154,7 +160,8 @@ public class PictureTester
     // testMirrorDiagonal();
     // testCollage();
     // testCopy();
-    testCopyPart();
+    // testCopyPart();
+    testMyCollage();
     // testEdgeDetection();
     // testEdgeDetection2();
     // testChromakey();
