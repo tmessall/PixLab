@@ -100,6 +100,13 @@ public class PictureTester
     beach.mirrorHorizontalBotToTop();
     beach.explore();
   }
+
+  public static void testMirrorDiagonal() {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.mirrorDiagonal();
+    beach.explore();
+  }
   
   /** Main method for testing.  Every class can have a main
     * method in Java */
@@ -108,21 +115,21 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
-    testKeepOnlyBlue();
+    // testZeroBlue();
+    // testKeepOnlyBlue();
     // testKeepOnlyRed();
     // testKeepOnlyGreen();
-    testNegate();
-    testFixUnderwater();
-    testGrayscale();
-    testMirrorVertical();
-    testMirrorVerticalRightToLeft();
-    testMirrorTemple();
-    testMirrorHorizontal();
-    testMirrorHorizontalBotToTop();
+    // testNegate();
+    // testFixUnderwater();
+    // testGrayscale();
+    // testMirrorVertical();
+    // testMirrorVerticalRightToLeft();
+    // testMirrorTemple();
+    // testMirrorHorizontal();
+    // testMirrorHorizontalBotToTop();
     // testMirrorArms();
     // testMirrorGull();
-    // testMirrorDiagonal();
+    testMirrorDiagonal();
     // testCollage();
     // testCopy();
     // testEdgeDetection();
