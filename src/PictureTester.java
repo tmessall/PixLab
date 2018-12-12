@@ -161,8 +161,8 @@ public class PictureTester
     // testCollage();
     // testCopy();
     // testCopyPart();
-    testMyCollage();
-    // testEdgeDetection();
+    // testMyCollage();
+    testEdgeDetection();
     // testEdgeDetection2();
     // testChromakey();
     // testEncodeAndDecode();
