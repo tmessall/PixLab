@@ -107,7 +107,7 @@ public class PictureTester
     beach.mirrorDiagonal();
     beach.explore();
   }
-  
+
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -124,12 +124,12 @@ public class PictureTester
     // testGrayscale();
     // testMirrorVertical();
     // testMirrorVerticalRightToLeft();
-    // testMirrorTemple();
+    testMirrorTemple();
     // testMirrorHorizontal();
     // testMirrorHorizontalBotToTop();
     // testMirrorArms();
     // testMirrorGull();
-    testMirrorDiagonal();
+    // testMirrorDiagonal();
     // testCollage();
     // testCopy();
     // testEdgeDetection();
